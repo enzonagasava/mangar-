@@ -1,0 +1,133 @@
+.method{
+    background-color: #951F45;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+
+    @media(max-width:768px){
+        display: flex;
+        align-items: normal;
+        height: auto;
+    }
+
+
+    &__content{
+
+        background-image: url(../../dist/images/background-metodo.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @media(max-width:768px){
+            display: flex;
+            justify-content: normal;
+            background-size: cover;
+            background-position-x: center;
+            height: auto;
+
+        }
+
+        &--title{
+
+            h3{
+                display: flex;
+                color: #EFAE9C;
+                justify-content: center;
+                margin-top: 80px;
+
+                @media(max-width:768px){
+                    display: flex;
+                    justify-content: space-around;
+                    font-weight: 400;
+                    margin-left: 17%;
+                }
+        
+        
+            }
+
+        }
+
+
+        &__item{
+
+
+            &__arrow{
+                display: flex;
+                justify-content: space-between;
+                position: relative;
+                top: 50%;
+                z-index: 1;
+
+                @media(max-width:768px){
+                    display: none;
+                }
+                span{
+
+
+                    svg{
+                        height: 30px;
+                    }
+                }
+    
+            }
+
+
+
+            &--card{
+                position: relative;
+                width: 100vw;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 100px;
+                margin-top: 52px;
+
+
+
+                &-text{
+                    display: flex;
+                    justify-content: center;
+                    text-align: center;
+                    background-color: #FFDFD6;
+                    border-radius: 14px;
+                    padding: 59px 75px 75px 75px ;
+                    max-width: 75%;
+                    margin-left: 13%;
+
+
+
+                    span{
+                        color: #7C1715;
+                    }
+
+                    p{
+                        color: #7C1715;
+                        margin: 9px;
+                        margin-top: 50px;
+                    }
+
+                    @media(max-width:768px){
+                        padding:59px 14px 66px 14px ;
+                        height: 545px;
+
+                        span{
+                            font-weight: 700;
+                        }
+
+                        p{
+                            margin-top: 20px;
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+

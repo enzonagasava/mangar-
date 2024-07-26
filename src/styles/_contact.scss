@@ -1,0 +1,124 @@
+.contact{
+    width: 100vw;
+
+
+    &__content{
+        display: flex;
+        align-items: center;
+        height: 110vh;
+        justify-content: center;
+
+
+        &__form{
+
+            @media(max-width:768px){
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            button{
+                width: 140px;
+                height: 50px;
+                border-radius: 24px;
+                border: none;
+                font-size: 36px;
+                font-weight: 200;
+                color: #fff;
+                background-color: #951F45;
+                cursor: pointer;
+                position: relative;
+                bottom: -15px;
+                left: 80%;
+
+                @media(max-width: 768px){
+                    left: 14%;
+                    bottom: -100px;
+                    width: 218px;
+                    height: 58px;
+
+                }
+                }
+
+            h3{
+                font-weight: 300;
+                color: #FFDFD6;
+                display: flex;
+                justify-content: center;
+                margin-bottom: 28px;
+
+                @media(max-width:768px){
+                    position: relative;
+                    left: 13%;
+                }
+            }
+
+            &--item{
+                height: 400px;
+                width: 919px;
+                background-color: #fff;
+                border-radius: 63px;
+                padding: 30px;
+                padding-left: 43px;
+                padding-right: 43px;
+                display: block;
+
+                @media(max-width:768px){
+                    height: 513px;
+                    width: 379px;
+                }
+                
+                ul{
+                    li{
+                        display: flex;
+                        flex-direction: column;
+                        list-style: none;
+                        
+                        label  {
+                            font-size: 24px;
+                            margin-bottom:2px ;
+                            margin-top:14px ;
+                        }
+                        
+                        input{
+                            border: none;
+                            background-color: #F5F5F5;
+                            height: 44px;
+                            border-radius: 24px;
+                            padding:10px;
+                            padding-left: 20px;
+                        }
+
+
+                        textarea{    
+                            resize: none;
+                            border: none;
+                            background-color: #F5F5F5;
+                            border-radius: 24px;
+                            padding: 10px;
+                            padding-left: 20px;
+                            height: 100px;
+                        }
+
+                        textarea::placeholder{
+                            color: #C5C5C5;
+                            
+                        }
+
+                        #email::-webkit-input-placeholder{
+                            color: #C5C5C5;
+                            
+                        }
+
+                        #name::-webkit-input-placeholder{
+                            color: #C5C5C5;
+                            
+                        }
+
+                    }
+    
+                }
+            }
+        }
+    }
+}
