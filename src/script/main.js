@@ -10,7 +10,7 @@ $(document).ready(function(){
     if(window.innerWidth <= 768){
         var footer = document.createElement('footer')
 
-        footer.innerHTML = `<footer style="display: flex;"> <div style="background-color: #fff; width: 430px; height: 145px; position: relative; padding-top: 19px; padding-left: 71px; ">
+        footer.innerHTML = `<footer style="display: flex; width:80vw;"> <div style="background-color: #fff; width: 430px; height: 145px; position: relative; padding-top: 19px; padding-left: 71px; ">
                     <img style="padding-bottom: 33px;" src="./dist/images/icon 1.png" alt="logo">
                 </div>
                 <div style="padding-top:30px; padding-right: 45px; display: flex; justify-content: space-between; flex-direction: column;">
