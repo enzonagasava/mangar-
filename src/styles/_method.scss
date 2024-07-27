@@ -130,4 +130,31 @@
     }
 }
 
+.slick-dots{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    list-style-type:none ;
+    padding: 1em 0;
+
+    li{
+        margin: 0 0.25em;
+    }
+
+    button{
+        display: block;
+        width: 1em;
+        height: 1em;
+        padding: 0;
+        text-indent: -999px;
+        border-radius:100%;
+        border: none;
+        background-color: #FFDFD6;
+    }
+
+    li.slick-active button{
+        background-color: #951F45;
+    }
+}
+
 

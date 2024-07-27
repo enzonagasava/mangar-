@@ -52,6 +52,13 @@ $(document).ready(function(){
         slidesToScroll: 1,
         nextArrow: '.next-arrow',
         prevArrow: '.prev-arrow',
+        responsive: [{
+            breakpoint: 768,
+            settings:{
+                dots: true,
+                infinite: true,
+            }
+        }]
     })
 
     $(".project__content__item--carousel").slick({
@@ -78,6 +85,7 @@ $(document).ready(function(){
                 slidesToShow: 2,
                 vertical: false,
                 verticalSwiping: false,
+                arrows: false,
             }
         }]
     })
