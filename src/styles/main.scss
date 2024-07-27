@@ -124,3 +124,8 @@ html {
 .text--regular{
     @include text(24px)
 }
+
+.footerMobile{
+    display: flex;
+    justify-content: center;
+}
