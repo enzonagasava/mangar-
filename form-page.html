@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário enviado</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Outfit, sans-serif;
+        }
+
+        .container{
+            background-color:#7C1715 ;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1{
+            color: #fff;
+            font-weight: 400;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            border: none;
+            background-color: #951F45;
+            padding: 15px 20px;
+            border-radius: 24px;
+        }
+
+        a:hover{
+            filter: brightness(110%);
+        }
+
+        .button{
+            margin-top: 2em;
+        }
+
+        @media screen and (max-width:768px) {
+            h1{
+                font-size: 20px;
+            }
+        }   
+        
+@font-face{
+    font-family: Outfit;
+    src: url(../../assets/Outfit-Medium.ttf);
+    font-weight: 300;
+}
+
+@font-face{
+    font-family: Outfit;
+    src: url(../../assets/Outfit-SemiBold.ttf);
+    font-weight: 600;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Obrigado, o seu formulário foi enviado.</h1>        
+        <h1>Entraremos em contato em breve!</h1>
+        <div class="button">
+            <a href="index.html">voltar para o site</a>
+        </div>
+    </div>
+</body>
+</html>
