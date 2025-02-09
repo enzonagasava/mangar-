@@ -6,7 +6,7 @@
     <title>Mangará</title>
     <link rel="stylesheet" href="./dist/css/main.css">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json"/>
+    <link rel="manifest" href="/manifest.json">
 </head>
 <body>
     <div class="container">
@@ -248,7 +248,11 @@
 </div>
     <script src="./src/script/jquery-3.7.1.min.js"></script>
     <script src="./src/script/slick.min.js"></script>
-    <script src="./src/script/main.js" >
+    <script src="./src/script/main.js" ></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js');
+        }
     </script>
 </body>
 </html>
