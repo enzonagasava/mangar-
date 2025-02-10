@@ -254,6 +254,15 @@
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('/sw.js');
         }
+
+        document.addEventListener("click", function() {
+            if (document.documentElement.requestFullscreen) {
+                document.documentElement.requestFullscreen();
+            } else if (document.documentElement.webkitRequestFullscreen) { 
+                document.documentElement.webkitRequestFullscreen();
+            }
+        });
+
     </script>
 </body>
 </html>
