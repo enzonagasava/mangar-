@@ -10,7 +10,7 @@
     <meta name="theme-color" content="#000000">
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="container">
             <div class="box__primeiro">
                 <div class="box__primeiro__content" id="home">
                     <header class="header">
@@ -20,9 +20,9 @@
                                 <img src="./dist/images/icon 1.png" alt="icon">
                             </div>
                             <label for="menu-hamburguer">
-                                <div class="mburg">
+                                <input class="mburg">
                                     <span class="hamburguer"></span>
-                                </div>
+                                </input>
                             </label>
                             <input type="checkbox" id="check">
                             <label for="check" id="icone"></label>
@@ -182,7 +182,7 @@
                                 <div class="project__content__item">
                                     <div class="project__content__item--text">
                                         <h3 class="title--big">projetos</h3>
-                                        <h3 class="title--big">autênticos</h3>
+                                        <h3 class="title--big" style="margin-left: 1rem;">autênticos</h3>
                                         <span class="title">que já saíram por aqui &nbsp;</span>
                                         <button type="button">veja mais detalhes</button>
                                     </div>
@@ -250,19 +250,55 @@
     <script src="./src/script/jquery-3.7.1.min.js"></script>
     <script src="./src/script/slick.min.js"></script>
     <script src="./src/script/main.js" ></script>
-    <script>
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/sw.js');
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const container = document.querySelector('#container');
+
+    // Verifica se a largura da tela é maior ou igual a 768px
+    const mediaQuery = window.matchMedia('(min-width: 769px)');
+
+    // Função para adicionar ou remover o evento de scroll
+    const handleScroll = (event) => {
+        // Verifica se a tecla Shift ou Ctrl está pressionada
+        if (event.shiftKey || event.ctrlKey) {
+            // Permite o comportamento padrão (scroll horizontal ou zoom)
+            return;
         }
 
-        document.addEventListener("click", function() {
-            if (document.documentElement.requestFullscreen) {
-                document.documentElement.requestFullscreen();
-            } else if (document.documentElement.webkitRequestFullscreen) { 
-                document.documentElement.webkitRequestFullscreen();
-            }
-        });
+        // Impede o comportamento padrão do scroll vertical
+        event.preventDefault();
+        console.log('Scroll detectado');
 
-    </script>
+        // Obtém a direção e a intensidade do scroll
+        const delta = event.deltaY || event.detail || event.wheelDelta;
+
+        // Aumenta a intensidade do scroll (multiplica o delta por um fator)
+        const scrollIntensity = 3; // Ajuste este valor para controlar a intensidade
+        const scrollAmount = delta * scrollIntensity;
+
+        // Move o scroll horizontalmente
+        container.scrollBy({
+            left: scrollAmount, // Usa o delta multiplicado para mover horizontalmente
+            behavior: 'smooth' // Adiciona um efeito suave
+        });
+    };
+
+    // Adiciona ou remove o evento de scroll com base na largura da tela
+    const handleMediaQueryChange = (event) => {
+        if (event.matches) {
+            // Se a largura da tela for >= 768px, adiciona o evento de scroll
+            container.addEventListener('wheel', handleScroll, { passive: false });
+        } else {
+            // Se a largura da tela for < 768px, remove o evento de scroll
+            container.removeEventListener('wheel', handleScroll);
+        }
+    };
+
+    // Verifica a largura da tela ao carregar a página
+    handleMediaQueryChange(mediaQuery);
+
+    // Observa mudanças na largura da tela (por exemplo, ao redimensionar a janela)
+    mediaQuery.addEventListener('change', handleMediaQueryChange);
+});</script>
 </body>
 </html>

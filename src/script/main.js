@@ -53,10 +53,12 @@ $(document).ready(function(){
         nextArrow: '.next-arrow',
         prevArrow: '.prev-arrow',
         responsive: [{
-            breakpoint: 768,
+            breakpoint: 769,
             settings:{
                 dots: true,
                 infinite: true,
+                vertical: false,
+                verticalSwiping: false,
             }
         }]
     })
@@ -80,7 +82,7 @@ $(document).ready(function(){
             }
         },
         {
-            breakpoint: 768,
+            breakpoint: 769,
             settings: {
                 slidesToShow: 2,
                 vertical: false,
